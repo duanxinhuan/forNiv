@@ -6,7 +6,7 @@ from notification import Notification
 cred = credentials.Certificate("market-spaace-firebase-adminsdk-ji1ox-78fda81106.json")
 firebase_admin.initialize_app(cred)
 
-def sendPush():
+def sendPush(uid):
     # See documentation on defining a message payload.
     message = messaging.Message(
         data = {
@@ -15,7 +15,7 @@ def sendPush():
             "body": "body"
             
         },
-        topic =  "lpl",
+        topic =  uid,
     )
 
 
