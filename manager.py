@@ -15,6 +15,7 @@ def sendPush(uid):
             "body": "body"
             
         },
+        # put the uid in the fire base to here, to make sure the programm push to the right user.
         topic =  uid,
     )
 
